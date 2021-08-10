@@ -37,3 +37,13 @@ install(EXPORT sample_lib_targets
 install(FILES "cmake/sample_libConfig.cmake"
         DESTINATION lib/cmake/sample_lib/)
 
+# cpack for generating debain package
+set(CPACK_PACKAGE_VENDOR "GNU")
+set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Anonymous")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "A very simple package")
+set(CPACK_PACKAGE_VERSION_MAJOR 1)
+set(CPACK_PACKAGE_VERSION_MINOR 0)
+set(CPACK_PACKAGE_VERSION_PATCH 0)
+
+include(CPack)
